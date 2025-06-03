@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Survey Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+      color: #4a90e2;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    textarea {
+      resize: vertical;
+    }
+    fieldset {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    legend {
+      font-weight: bold;
+    }
+    .buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 0 10px;
+      border: none;
+      background-color: #4a90e2;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #3367c0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎵 Music Survey Form</h1>
+
+  <form action="http://www.uyar.com/teaching/ecc006/2017spring/login.php" method="post">
+    
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="feedback">Your thoughts about music:</label>
+    <textarea id="feedback" name="feedback" rows="3" cols="60"></textarea>
+
+    <fieldset>
+      <legend>Favorite Music Genre</legend>
+      <input type="radio" id="rock" name="genre" value="Rock">
+      <label for="rock">Rock</label><br>
+      <input type="radio" id="pop" name="genre" value="Pop">
+      <label for="pop">Pop</label><br>
+      <input type="radio" id="jazz" name="genre" value="Jazz">
+      <label for="jazz">Jazz</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Instruments You Play</legend>
+      <input type="checkbox" id="guitar" name="instrument[]" value="Guitar">
+      <label for="guitar">Guitar</label><br>
+      <input type="checkbox" id="piano" name="instrument[]" value="Piano">
+      <label for="piano">Piano</label><br>
+      <input type="checkbox" id="drums" name="instrument[]" value="Drums">
+      <label for="drums">Drums</label>
+    </fieldset>
+
+    <label for="device">How do you listen to music?</label>
+    <select id="device" name="device" size="3">
+      <option>Spotify</option>
+      <option>Apple Music</option>
+      <option>CDs</option>
+      <option>Vinyl</option>
+    </select>
+
+    <div class="buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+
+</body>
+</html>
